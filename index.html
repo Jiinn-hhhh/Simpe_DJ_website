@@ -15,48 +15,231 @@
         <header>
             <h1 class="glitch" data-text="Simple DJ">Simple DJ</h1>
             <p class="subtitle">Turn Your Browser Into A Turntable</p>
+            <div class="creator-info">
+                <span class="creator-name">Seunjin Hwang</span>
+                <span class="creator-separator">•</span>
+                <span class="creator-email">seungjin0702@kaist.ac.kr</span>
+            </div>
         </header>
 
         <section class="hero">
-            <div class="pixel-art-turntable">
-                <pre>
-   _______________________
-  |  ___________________  |
-  | |                   | |
-  | |   ((  O  ))       | |
-  | |___________________| |
-  |_______________________|
-      //             \\
-                </pre>
+            <div class="main-tabs">
+                <button class="main-tab-button active" data-content="home">HOME</button>
+                <button class="main-tab-button" data-content="devlog">ABOUT</button>
+            </div>
+            <div class="hero-image-container">
+                <img src="app.png" alt="Simple DJ App" class="hero-image">
             </div>
         </section>
 
-        <section class="content">
+        <section class="content" id="home-content">
             <div class="card">
-                <h2>> ABOUT_THE_PROJECT</h2>
-                <p>Experience the nostalgia of analog mixing right in your browser. Simple DJ combines classic aesthetics with modern web technologies to deliver a seamless music mixing experience.</p>
+                <h2>> ABOUT THE PROJECT</h2>
+                <p>Enjoy the experience of mixing music right in your browser. Simple DJ combines clean aesthetics with modern web technologies to deliver a seamless music mixing experience.</p>
+            </div>
+
+            <div class="card action-card">
+                <h2>> GET STARTED</h2>
+                <p class="app-notice">The web app is currently unstable. Please download and use from the source code on GitHub.</p>
+                <div class="button-container">
+                    <a href="#" class="btn-retro">LAUNCH APP</a>
+                    <a href="https://github.com/Jiinn-hhhh/Simple_DJ" class="btn-retro">SOURCE CODE</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>> DEMO VIDEO</h2>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/dcRuyXthcO4" 
+                        title="Simple DJ Demo Video"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
 
             <div class="card">
                 <h2>> FEATURES</h2>
-                <ul class="retro-list">
-                    <li>[x] Dual Deck Control</li>
-                    <li>[x] Real-time Audio FX</li>
-                    <li>[x] Beat Matching</li>
-                    <li>[x] Zero Install Needed</li>
-                </ul>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Dual Deck Mixing with BPM Sync</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Control two independent decks with automatic BPM detection and synchronization. Mix tracks seamlessly with tempo matching.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Audio Stem Separation</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Separate audio tracks into individual stems using AI-powered separation. Toggle drums, bass, vocals, and other elements independently for creative mixing.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Real-time EQ & Filters</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Adjust High, Mid, and Low frequencies with 3-band EQ controls. Apply low-pass and high-pass filters for smooth transitions.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Loop Controls & Waveform Visualization</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Set loop points with LOOP IN and LOOP OUT controls. Visualize track progress with interactive waveform display.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Crossfader</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Smoothly transition between Deck A and Deck B using the crossfader. Control the mix balance with arrow keys or mouse.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>XY Pad Effects</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Apply real-time reverb and distortion effects using the interactive XY pad. Control effect intensity by moving the cursor on the pad.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Spectrum Analyzer</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Visualize audio frequencies in real-time with a retro-style spectrum analyzer. See the frequency response of each deck as you mix.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Sampler</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Trigger sound effects like airhorn and siren during your mix. Add excitement and energy to your DJ sets.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="card action-card">
-                <h2>> READY_PLAYER_ONE?</h2>
-                <a href="#" class="btn-retro">LAUNCH APP</a>
-                <a href="https://github.com/hwangseungjin/Simple-DJ" class="btn-retro secondary">SOURCE CODE</a>
-            </div>
         </section>
 
+        <section class="content" id="devlog-content" style="display: none;">
+            <div class="card">
+                <h2>> MOTIVATION</h2>
+                <p style="color: #ffffff;">I wanted to create a project that uses cutting-edge technology to work with music. Real DJ consoles are expensive and difficult to use, so I thought it would be interesting to implement a simple version on the web. My goal was to create a console that is visually simple yet matches my personal taste. I researched how real DJs work and used that as a reference when designing the features.</p>
+            </div>
+
+            <div class="card">
+                <h2>> TECHNICAL BACKGROUND</h2>
+                <p style="color: #ffffff;">This project combines real-time audio processing using the Web Audio API with deep learning-based source separation.</p>
+                
+                <h3 style="color: var(--secondary-color); font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1rem;">Source Separation</h3>
+                <p style="color: #ffffff;">The HDemucs model from PyTorch is used to separate audio files into four stems (drums, bass, vocals, other). The backend is built with FastAPI, and uploaded audio files are separated on the server, allowing individual control of each stem. Separation runs asynchronously.</p>
+                
+                <h3 style="color: var(--secondary-color); font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1rem;">Frontend Architecture</h3>
+                <p style="color: #ffffff;">The frontend is built with React and Vite, and audio processing is handled entirely through the Web Audio API. Each stem is played through independent AudioBufferSourceNode instances, with volume and mute control via GainNode. BPM synchronization is implemented by adjusting playbackRate, ensuring both tracks play in sync with a master BPM.</p>
+                
+                <h3 style="color: var(--secondary-color); font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1rem;">Audio Processing Pipeline</h3>
+                <p style="color: #ffffff;">Each track includes a 3-band parametric EQ (Low: below 300Hz, Mid: 300Hz-3kHz, High: above 3kHz) and Low-pass/High-pass filters. The crossfader adjusts the volume of both tracks, and the master bus includes reverb and distortion effects controlled via an XY pad. Real-time spectrum analysis uses FFT through AnalyserNode.</p>
+                
+                <h3 style="color: var(--secondary-color); font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1rem;">Additional Features</h3>
+                <p style="color: #ffffff;">BPM analysis uses librosa's beat tracking, and key detection uses chroma features with the Krumhansl-Schmuckler algorithm. Loops are quantized to beats and implemented using the Web Audio API's loop property.</p>
+            </div>
+
+            <div class="card">
+                <h2>> FUTURE PLANS</h2>
+                
+                <h3 style="color: var(--secondary-color); font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1rem;">Performance & Infrastructure</h3>
+                <p style="color: var(--text-color); font-weight: bold; margin-bottom: 0.5rem;">Source Separation Optimization</p>
+                <p style="color: #ffffff; margin-bottom: 1rem;">Reduce server load by adopting lighter separation models or moving source separation to the client side.</p>
+                <p style="color: var(--text-color); font-weight: bold; margin-bottom: 0.5rem;">Stability & Deployment</p>
+                <p style="color: #ffffff; margin-bottom: 1rem;">Refactor the codebase and system architecture to ensure stable operation in a web server environment, followed by reliable deployment.</p>
+                
+                <h3 style="color: var(--secondary-color); font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1rem;">Core DJ Features</h3>
+                <p style="color: var(--text-color); font-weight: bold; margin-bottom: 0.5rem;">Extended DJ Console Controls</p>
+                <p style="color: #ffffff; margin-bottom: 1rem;">Add advanced DJ interactions such as turntable-style scratching and reverse playback.</p>
+                
+                <h3 style="color: var(--secondary-color); font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1rem;">User Experience</h3>
+                <p style="color: var(--text-color); font-weight: bold; margin-bottom: 0.5rem;">Library Management</p>
+                <p style="color: #ffffff; margin-bottom: 1rem;">Implement a track library and search system that allows users to pre-upload tracks and instantly load them for playback. This will require a robust backend pipeline for stem separation, storage, and retrieval.</p>
+            </div>
+        </section>
         <footer>
-            <p>&copy; 2025 Simple DJ Project. Insert Coin to Continue.</p>
+            <p>&copy; 2025 Simple DJ Project. Seungjin Hwang.</p>
         </footer>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const item = this.parentElement;
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (isActive) {
+                        item.classList.remove('active');
+                    } else {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // Main tab functionality (HOME / DEVELOPMENT LOG)
+            const mainTabButtons = document.querySelectorAll('.main-tab-button');
+            const homeContent = document.getElementById('home-content');
+            const devlogContent = document.getElementById('devlog-content');
+            const heroImageContainer = document.querySelector('.hero-image-container');
+            
+            mainTabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetContent = this.getAttribute('data-content');
+                    
+                    // Remove active class from all main tabs
+                    mainTabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show/hide content sections and image
+                    if (targetContent === 'home') {
+                        homeContent.style.display = 'block';
+                        devlogContent.style.display = 'none';
+                        heroImageContainer.style.display = 'block';
+                    } else if (targetContent === 'devlog') {
+                        homeContent.style.display = 'none';
+                        devlogContent.style.display = 'block';
+                        heroImageContainer.style.display = 'none';
+                    }
+                });
+            });
+
+        });
+    </script>
 </body>
 </html>

@@ -4,6 +4,7 @@
     --accent-color: #ff00ff; /* Hot Pink */
     --secondary-color: #00ffff; /* Cyan */
     --font-main: 'Press Start 2P', cursive;
+    --font-body: 'Share Tech Mono', monospace;
 }
 
 * {
@@ -69,15 +70,69 @@ h1 {
     letter-spacing: 2px;
 }
 
-.pixel-art-turntable {
+.creator-info {
+    margin-top: 1.2rem;
+    font-size: 0.8rem;
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+.creator-name {
+    color: #ffffff;
+    margin-right: 0.8rem;
+}
+
+.creator-separator {
+    color: #666;
+    margin: 0 0.5rem;
+}
+
+.creator-email {
+    color: #ffffff;
+    font-size: 0.75rem;
+}
+
+.hero-image-container {
     text-align: center;
-    font-family: monospace;
-    font-size: 1rem; /* Adjusted for better ASCII art visibility */
-    color: white;
     margin: 2rem 0;
-    white-space: pre-wrap; /* Ensure ASCII art wraps correctly on small screens */
-    overflow-x: hidden; /* Hide overflow if it happens */
-    line-height: 1.2;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    max-width: 600px;
+    image-rendering: pixelated;
+}
+
+.main-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.main-tab-button {
+    background-color: transparent;
+    border: 3px solid var(--text-color);
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    font-family: var(--font-main);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+.main-tab-button:hover {
+    background-color: rgba(51, 255, 0, 0.1);
+    color: var(--text-color);
+}
+
+.main-tab-button.active {
+    background-color: var(--text-color);
+    color: #000;
+    box-shadow: 4px 4px 0px var(--secondary-color);
 }
 
 .card {
@@ -97,12 +152,174 @@ h1 {
 h2 {
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 p {
     margin-bottom: 1rem;
-    font-size: 0.9rem; /* Slightly smaller body text */
+    font-size: 1rem; /* Slightly smaller body text */
+    font-family: var(--font-body);
+    line-height: 1.8;
+}
+
+.app-notice {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin-top: 1.5rem;
+    overflow: hidden;
+    border: 4px solid var(--text-color);
+    box-shadow: 4px 4px 0px var(--secondary-color);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Tab Styles */
+.tab-container {
+    margin-top: 1rem;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 0.5rem;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-main);
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    top: 2px;
+}
+
+.tab-button:hover {
+    background-color: rgba(51, 255, 0, 0.1);
+    color: var(--text-color);
+}
+
+.tab-button.active {
+    background-color: var(--text-color);
+    color: #000;
+    border-bottom: 2px solid var(--text-color);
+    margin-bottom: -2px;
+}
+
+.tab-content {
+    min-height: 100px;
+}
+
+.tab-pane {
+    display: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    padding: 0.5rem 0;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-pane p {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-family: var(--font-body);
+}
+
+/* About The Project section - white text for better readability */
+.card:first-child p {
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+/* Accordion Styles */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.accordion-item {
+    border: 2px solid var(--text-color);
+    background-color: #000;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.accordion-header:hover {
+    background-color: rgba(51, 255, 0, 0.1);
+    color: var(--text-color);
+}
+
+.accordion-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+    color: var(--secondary-color);
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-item.active .accordion-header {
+    color: var(--secondary-color);
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.accordion-content p {
+    padding: 0 1rem 1rem 1rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px;
 }
 
 .retro-list {
@@ -114,6 +331,14 @@ p {
     padding-left: 1rem;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
 .btn-retro {
     display: inline-block;
     background-color: var(--text-color);
@@ -121,11 +346,10 @@ p {
     padding: 1rem 2rem;
     text-decoration: none;
     font-weight: bold;
-    margin-right: 1rem;
-    margin-top: 1rem;
     border: 4px solid var(--text-color);
     box-shadow: 4px 4px 0px #fff;
     transition: all 0.2s;
+    flex: 0 0 auto;
 }
 
 .btn-retro:hover {
@@ -133,16 +357,6 @@ p {
     color: var(--text-color);
     box-shadow: 4px 4px 0px var(--secondary-color);
     transform: translateY(-2px);
-}
-
-.btn-retro.secondary {
-    background-color: transparent;
-    color: var(--text-color);
-}
-
-.btn-retro.secondary:hover {
-    background-color: var(--text-color);
-    color: #000;
 }
 
 footer {
@@ -184,13 +398,32 @@ footer {
         padding: 1.5rem;
     }
 
-    .btn-retro {
-        display: block;
-        margin-right: 0;
-        text-align: center;
+    .button-container {
+        flex-direction: column;
+        gap: 0.8rem;
     }
     
-    .pixel-art-turntable {
-        font-size: 0.7rem; /* Smaller ASCII art on mobile */
+    .btn-retro {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+
+    .tab-button {
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .main-tabs {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .main-tab-button {
+        font-size: 0.7rem;
+        padding: 0.7rem 1.5rem;
     }
 }

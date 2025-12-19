@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Log - Simple DJ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crt-overlay"></div>
+    <div class="container">
+        <header>
+            <h1 class="glitch" data-text="Simple DJ">Simple DJ</h1>
+            <p class="subtitle">Turn Your Browser Into A Turntable</p>
+            <div class="creator-info">
+                <span class="creator-name">Seunjin Hwang</span>
+                <span class="creator-separator">•</span>
+                <span class="creator-email">seungjin0702@kaist.ac.kr</span>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-image-container">
+                <img src="app.png" alt="Simple DJ App" class="hero-image">
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="card">
+                <h2>> DEVELOPMENT LOG</h2>
+                <p>This is where I document my development journey and process for Simple DJ.</p>
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="entry1">ENTRY 1</button>
+                        <button class="tab-button" data-tab="entry2">ENTRY 2</button>
+                        <button class="tab-button" data-tab="entry3">ENTRY 3</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="entry1">
+                            <div class="card" style="border: none; box-shadow: none; padding: 0; margin: 0;">
+                                <h2>> ENTRY 1</h2>
+                                <p>Write your first development log entry here. Document your thoughts, challenges, and progress.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="entry2">
+                            <div class="card" style="border: none; box-shadow: none; padding: 0; margin: 0;">
+                                <h2>> ENTRY 2</h2>
+                                <p>Write your second development log entry here.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="entry3">
+                            <div class="card" style="border: none; box-shadow: none; padding: 0; margin: 0;">
+                                <h2>> ENTRY 3</h2>
+                                <p>Write your third development log entry here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card action-card">
+                <div class="button-container">
+                    <a href="index.html" class="btn-retro">BACK TO HOME</a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 Simple DJ Project. Seungjin Hwang.</p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab functionality
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding pane
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
